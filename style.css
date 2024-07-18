@@ -1,0 +1,296 @@
+
+:root {
+    --color-neutral-100:#AAB8C2;
+    --color-neutral-200:#A3B1BA;
+    --color-red-100: #E2264D;
+    --color-red-200: #F48EA7;
+    --color-purple-100: #CC8EF5;
+    --color-purple-200: #D46ABF;
+    --color-purple-300: #DD4688;
+    --color-blue-100: #9FC7FA;
+    --color-green-100: #9CD8C3;
+    --motion-speed-exit: 0.15s;
+    --motion-speed-hover: 0.2s;
+  }
+  
+  .content {
+      display: flex;
+      width: 100vw;
+      height: 100vh;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: #fff;
+  }
+  
+  /*---------------------------
+  Animated Heart Icon - setup
+  ----------------------------*/
+  .anicon-heart {
+    
+    .anicon-heart__svg {
+      cursor: pointer;
+      overflow: visible;
+      width: 160px;
+    }
+    
+    .anicon-heart__heart {
+      fill: var(--color-neutral-100);
+          transform-origin: center;
+          animation: animateHeartExit var(--motion-speed-exit) linear forwards;
+      
+      &:hover {
+        fill: var(--color-neutral-200);
+        transition: fill var(--motion-speed-hover) ease;
+      }
+      }
+      
+    .anicon-heart__circ {
+          transform-origin: 29.5px 29.5px;
+      }
+    
+    .anicon-heart__checkbox {
+        display: none;
+    }
+  }
+  
+  
+  /*---------------------------
+  Animated Heart Icon - 
+  Is Checked State
+  ----------------------------*/
+  .anicon-heart__checkbox:checked+label .anicon-heart__svg {
+      
+    .anicon-heart__heart {
+          transform: scale(.2);
+          fill: var(--color-red-100);
+          animation: animateHeartEnter 0.3s ease-in forwards 0.25s;
+      }
+      
+    .anicon-heart__circ {
+          transition: all 2s;
+          animation: animateCircle 0.3s ease-in forwards;
+          opacity: 1;
+      }
+      
+    .anicon-heart__group1 {
+          opacity: 1;
+          transition: 0.1s all 0.3s;
+      
+          .ani-heart__dot1 {
+              transform: scale(0) translate(0, -30px);
+              transform-origin: 0 0 0;
+              transition: 0.5s transform 0.3s;
+          }
+      
+          .ani-heart__dot2 {
+              transform: scale(0) translate(10px, -50px);
+              transform-origin: 0 0 0;
+              transition: 1.5s transform 0.3s;
+          }
+      }
+    
+      .anicon-heart__group2 {
+          opacity: 1;
+          transition: 0.1s all 0.3s;
+      
+          .ani-heart__dot1 {
+              transform: scale(0) translate(60px, -15px);
+              transform-origin: 0 0 0;
+              transition: 1.5s transform 0.3s;
+          }
+      
+          .ani-heart__dot2 {
+        transform: scale(0) translate(30px, -15px);
+              transform-origin: 0 0 0;
+              transition: 0.5s transform 0.3s;
+          }
+      }
+    
+      .anicon-heart__group3 {
+          opacity: 1;
+          transition: 0.1s all 0.3s;
+      
+          .ani-heart__dot1 {
+              transform: scale(0) translate(60px, 10px);
+              transform-origin: 0 0 0;
+              transition: 1.5s transform 0.3s;
+          }
+      
+          .ani-heart__dot2 {
+        transform: scale(0) translate(30px, 0px);
+              transform-origin: 0 0;
+              transition: 0.5s transform 0.3s;
+          }
+      }
+    
+      .anicon-heart__group4 {
+          opacity: 1;
+          transition: 0.1s all 0.3s;
+      
+          .ani-heart__dot1 {
+              transform: scale(0) translate(30px, 15px);
+              transform-origin: 0 0;
+              transition: 0.5s transform 0.3s;
+          }
+      
+          .ani-heart__dot2 {
+              transform: scale(0) translate(40px, 50px);
+              transform-origin: 0 0 0;
+              transition: 1.5s transform .3s;
+          }
+      }
+    
+      .anicon-heart__group5 {
+          opacity: 1;
+          transition: 0.1s all 0.3s;
+      
+          .ani-heart__dot1 {
+              transform: scale(0) translate(-10px, 20px);
+              transform-origin: 0 0 0;
+              transition: 0.5s transform 0.3s;
+          }
+      
+          .ani-heart__dot2 {
+              transform: scale(0) translate(-60px, 30px);
+              transform-origin: 0 0 0;
+              transition: 1.5s transform 0.3s;
+          }
+      }
+    
+      .anicon-heart__group6 {
+          opacity: 1;
+          transition: 0.1s all 0.3s;
+      
+          .ani-heart__dot1 {
+              transform: scale(0) translate(-30px, 0px);
+              transform-origin: 0 0 0;
+              transition: 0.5s transform 0.3s;
+          }
+      
+          .ani-heart__dot2 {
+              transform: scale(0) translate(-60px, -5px);
+              transform-origin: 0 0 0;
+              transition: 1.5s transform 0.3s;
+          }
+      }
+    
+      .anicon-heart__group7 {
+          opacity: 1;
+          transition: 0.1s all 0.3s;
+      
+          .ani-heart__dot1 {
+              transform: scale(0) translate(-55px, -30px);
+              transform-origin: 0 0 0;
+              transition: 1.5s transform 0.3s;
+          }
+      
+          .ani-heart__dot2 {
+        transform: scale(0) translate(-30px, -15px);
+              transform-origin: 0 0 0;
+              transition: 0.5s transform 0.3s;
+          }
+      }
+    
+      .anicon-heart__group2 {
+          opacity: 1;
+          transition: 0.1s opacity 0.3s;
+      }
+    
+      .anicon-heart__group3 {
+          opacity: 1;
+          transition: 0.1s opacity 0.3s;
+      }
+    
+      .anicon-heart__group4 {
+          opacity: 1;
+          transition: 0.1s opacity 0.3s;
+      }
+    
+      .anicon-heart__group5 {
+          opacity: 1;
+          transition: 0.1s opacity 0.3s;
+      }
+    
+      .anicon-heart__group6 {
+          opacity: 1;
+          transition: 0.1s opacity 0.3s;
+      }
+    
+      .anicon-heart__group7 {
+          opacity: 1;
+          transition: 0.1s opacity 0.3s;
+      }
+  }
+  
+  /*---------------------------
+  Circle Animation
+  ----------------------------*/
+  @keyframes animateCircle {
+      40% {
+          transform: scale(10);
+          opacity: 1;
+          fill: var(--color-purple-300);
+      }
+      55% {
+          transform: scale(11);
+          opacity: 1;
+          fill: var(--color-purple-200);
+      }
+      65% {
+          transform: scale(12);
+          opacity: 1;
+          fill: var(--color-purple-300);
+      }
+      75% {
+          transform: scale(13);
+          opacity: 1;
+          fill: transparent;
+          stroke-width: 0.5;
+      }
+      85% {
+          transform: scale(17);
+          opacity: 1;
+          fill: transparent;
+          stroke-width: 0.2;
+      }
+      95% {
+          transform: scale(18);
+          opacity: 1;
+          fill: transparent;
+          stroke-width: 0.1;
+      }
+      100% {
+          transform: scale(19);
+          opacity: 1;
+          fill: transparent;
+          stroke-width: 0;
+      }
+  }
+  
+  /*---------------------------
+  Heart Enter Animation
+  ----------------------------*/
+  @keyframes animateHeartEnter {
+      0% {
+          transform: scale(0.2);
+      }
+      40% {
+          transform: scale(1.4);
+      }
+      100% {
+          transform: scale(1);
+      }
+  }
+  
+  /*---------------------------
+  Heart Exit Animation
+  ----------------------------*/
+  @keyframes animateHeartExit {
+    50% {
+          transform: scale(1.2);
+      }
+      100% {
+          transform: scale(1);
+      }
+  }
